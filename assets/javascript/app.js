@@ -1,4 +1,50 @@
 $(document).ready(function() {
+
+    var index = 0;
+
+    var timer = {
+        time: 30,
+
+        reset: function() {
+            this.time = 30;
+            $("#timer").html("<h3>" + this.time + " seconds remaining</h3>");     
+        },
+        
+        start: function() {
+            counter = setInterval(timer.count, 1000);
+        },
+
+        stop: function() {
+            clearInterval(counter);
+        },
+
+        count: function() {
+                timer.time--;
+            if (timer.time >= 0) {
+                $("#timer").html("<h3>" + timer.time + " seconds remaining</h3>");
+            }
+            else {
+                index++;
+                wrongAnswer();
+                timer.reset();
+                if (index < questionArray.length) {
+                    nextQuestion(index);
+                }
+                else  {
+                    showScore();
+                }
+            }
+        }
+    }
+
+
+
+
+
+
+
+
+
     
     var Q1 = {
         statement : 'Some animals can get sunburn',

@@ -3,3 +3,10 @@ header {
     padding: 40px;
 }
 
+h3 {
+    text-align: center;
+}
+
+.button {
+    text-align: center;
+}

@@ -20,8 +20,15 @@ $(document).ready(function () {
         }
     }
 
-    $("#start").on("click", timer.run, loadQuestion());
+    $("#start").on("click", timer.run)
+
 });
+
+
+
+
+
+
 
 /**
  * step 1: show a start button and game title
@@ -37,21 +44,16 @@ $(document).ready(function () {
  
 
 function Question (question, answer) {
-    return {
-        statement: question,
-        answer: answer
-    }
+    this.statement = question;
+    this.answer = answer;
 }
 
-var questions = [];
-console.log(questions);
-
-questions.push(Question("Some animals can get sunburn", true));
-questions.push(Question("No cat likes water", false));
-questions.push(Question("Frogs have to drink lots of water", false));
-questions.push(Question("Elephants eat with their noses", true));
-questions.push(Question("Camels can walk 100 miles in the desert without water", true));
-questions.push(Question("Chimpanzees are nocturnal", false));
+Question("Some animals can get sunburn", true);
+Question("No cat likes water", false);
+Question("Frogs have to drink lots of water", false);
+Question("Elephants eat with their noses", true);
+Question("Camels can walk 100 miles in the desert without water", true);
+Question("Chimpanzees are nocturnal", false);
 
 var Q1 = {
     statement: 'Some animals can get sunburn',
@@ -84,14 +86,11 @@ var Q6 = {
 };
 
 var questionArray = [Q1, Q2, Q3, Q4, Q5, Q6];
-var counter = null;
-
+var counter = 0;
 var correct = 0;
 var wrong = 0;
 
-function loadQuestion() {
-    $("#question").html("<h4>" + questionArray[0].statement + "</h4>");
-}
 
-console.log(Q1.statement);
+
+
 

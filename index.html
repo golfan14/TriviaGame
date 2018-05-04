@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="assets/javascript/app.js"></script>
 </head>
 
@@ -13,49 +14,23 @@
 
     <header><h1>Animal Trivia!</h1></header>
 
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6" id="Q1">
-                <h3>Some animals can get sunburn</h3>
-                <button type="button" class="btn btn-secondary" id="true">True</button>
-                <button type="button" class="btn btn-secondary" id="false">False</button>
-            </div>
-            <div class="col-md-6" id="Q2">
-                <h3>No cat likes water</h3>
-                <button type="button" class="btn btn-secondary" id="true">True</button>
-                <button type="button" class="btn btn-secondary" id="false">False</button>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-6" id="Q3">
-                <h3>Frogs have to drink lots of water</h3>
-                <button type="button" class="btn btn-secondary" id="true">True</button>
-                <button type="button" class="btn btn-secondary" id="false">False</button>
-            </div>
-            <div class="col-md-6" id="Q4">
-                <h3>Elephants eat with their noses</h3>
-                <button type="button" class="btn btn-secondary" id="true">True</button>
-                <button type="button" class="btn btn-secondary" id="false">False</button>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-6" id="Q5">
-                <h3>Camels can walk 100 miles in the desert without water</h3>
-                <button type="button" class="btn btn-secondary" id="true">True</button>
-                <button type="button" class="btn btn-secondary" id="false">False</button>
-            </div>
-            <div class="col-md-6" id="Q6">
-                <h3>Chimpanzees are nocturnal</h3>
-                <button type="button" class="btn btn-secondary" id="true">True</button>
-                <button type="button" class="btn btn-secondary" id="false">False</button>
-            </div>
-        </div>
-    </div>
+    <button id="start">Click to Start!</button>
     
+    <div id="show-number">30</div>
+
+
+    <div class="question"></div>
+    <div class="answer"></div>
+        <div>
+            <button class="userAnswer" id="true">True</button>
+            <button class="userAnswer" id="false">False</button>
+        </div>
+    </div>    
+
     <div class="correct"></div>
     <div class="wrong"></div>    
 
-    <script src="assets/javascript/app.js"></script>
+    
 
 </body>
 </html> 
